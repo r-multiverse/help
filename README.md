@@ -34,5 +34,8 @@ Every hour, a GitHub Actions workflow from <https://github.com/r-releases/r-rele
 
 Also every hour, another GitHub Actions workflow in <https://github.com/r-releases/r-releases.r-universe.dev> collects all the packages and URLs from the [`packages` folder](https://github.com/r-releases/r-releases/tree/main/packages) folder and builds the `packages.json` file for the R universe at <https://github.com/r-releases/r-releases.r-universe.dev>. It uses the `"branch": "*release"` field in the JSON file so that each new GitHub tag and release sends the build to the universe. Development versions are not tracked.
 
-
 Once your package is in `packages.json`, each new GitHub tag and release you create will publish your package to <https://r-releases.r-universe.dev> so others can install it. Please visit <https://github.com/r-releases/r-releases.r-universe.dev> and <https://r-releases.r-universe.dev> for progress and status updates on your package.
+
+# Getting help
+
+Please report bugs to <https://github.com/r-releases/help/issues> and send other feedback and questions to <https://github.com/r-releases/help/discussions>. Please note that <https://github.com/r-releases/r-releases> can only accept pull requests to add or modify package entries.
