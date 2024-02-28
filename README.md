@@ -30,9 +30,9 @@ If the manual review was triggered by an error you know how to fix, please close
 
 # What happens next
 
-Every hour, a GitHub Actions workflow from <https://github.com/r-releases/r-releases.r-universe.dev> combs through the pull requests at <https://github.com/r-releases/r-releases/pulls> and automatically merges the ones that add new packages with correct-looking URLs. Pull requests that cannot be automatically merged are either closed or flagged for manual review. 
+Periodically, a GitHub Actions workflow from <https://github.com/r-releases/r-releases.r-universe.dev> combs through the pull requests at <https://github.com/r-releases/r-releases/pulls> and automatically merges the ones that add new packages with correct-looking URLs. Pull requests that cannot be automatically merged are either closed or flagged for manual review. 
 
-Also every hour, another GitHub Actions workflow in <https://github.com/r-releases/r-releases.r-universe.dev> collects all the packages and URLs from the [`packages` folder](https://github.com/r-releases/r-releases/tree/main/packages) folder and builds the `packages.json` file for the R universe at <https://github.com/r-releases/r-releases.r-universe.dev>. It uses the `"branch": "*release"` field in the JSON file so that each new GitHub tag and release sends the build to the universe. Development versions are not tracked.
+Also periodically, another GitHub Actions workflow in <https://github.com/r-releases/r-releases.r-universe.dev> collects all the packages and URLs from the [`packages` folder](https://github.com/r-releases/r-releases/tree/main/packages) folder and builds the `packages.json` file for the R universe at <https://github.com/r-releases/r-releases.r-universe.dev>. It uses the `"branch": "*release"` field in the JSON file so that each new GitHub tag and release sends the build to the universe. Development versions are not tracked.
 
 Once your package is in `packages.json`, each new GitHub tag and release you create will publish your package to <https://r-releases.r-universe.dev> so others can install it. Please visit <https://github.com/r-releases/r-releases.r-universe.dev> and <https://r-releases.r-universe.dev> for progress and status updates on your package.
 
