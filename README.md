@@ -1,6 +1,6 @@
 # r-releases
 
-`r-releases` is a community-curated [R universe](https://github.com/r-universe-org/help) of R packages deployed as tags/releases on GitHub. The GitHub repository at <https://github.com/r-releases/r-releases> allows anyone to register their package with this universe. The project is still in its prototype phase, but the goal is to build a production-ready community-wide CRAN-like repository that incentivizes thorough testing and puts control in the hands of the package maintainers.
+`r-releases` is a community-curated [R universe](https://r-releases.r-universe.dev) of R packages deployed as tags/releases on GitHub. The GitHub repository at <https://github.com/r-releases/r-releases> allows anyone to register packages  with the [universe](https://r-releases.r-universe.dev). The project is still in its prototype phase, but the goal is to build a production-ready community-wide CRAN-like repository that incentivizes thorough testing and puts control in the hands of the package maintainers.
 
 # How to install a package from `r-releases`
 
