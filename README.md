@@ -36,6 +36,10 @@ Also every hour, another GitHub Actions workflow in <https://github.com/r-releas
 
 Once your package is in `packages.json`, each new GitHub tag and release you create will publish your package to <https://r-releases.r-universe.dev> so others can install it. Please visit <https://github.com/r-releases/r-releases.r-universe.dev> and <https://r-releases.r-universe.dev> for progress and status updates on your package.
 
+# Ownership and attribution
+
+Each submitted package URL must be authentic and genuine. The URL must be the true location of the package according to its true owners. If a URL in https://github.com/r-releases/r-releases/tree/main/packages points to the wrong place, please submit a pull request to <https://github.com/r-releases/r-releases> to fix the URL. If you do not know the correct URL or do not want to submit a pull request, please open an issue at <https://github.com/r-releases/help/issues>.
+
 # Getting help
 
 Please report bugs to <https://github.com/r-releases/help/issues> and send other feedback and questions to <https://github.com/r-releases/help/discussions>. Please note that <https://github.com/r-releases/r-releases> can only accept pull requests to add or modify package entries.
