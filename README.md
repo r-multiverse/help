@@ -12,7 +12,7 @@ install.packages("jsonlite", repos = "https://r-releases.r-universe.dev")
 
 # Disclaimer
 
-The `r-releases` project is brand new and in its prototype phase. Policies are subject to change.
+The `r-releases` project is brand new and in its prototype phase. It is not ready for widespread production usage, and policies are subject to change.
 
 # How to add your package
 
