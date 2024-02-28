@@ -1,7 +1,5 @@
 # r-releases
 
-[![status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-
 `r-releases` is a community-curated [R universe](https://github.com/r-universe-org/help) of R packages which are distributed as tags and releases on GitHub. The GitHub repository at <https://github.com/r-releases/r-releases> allows anyone to contribute their package releases to this universe.
 
 # How to install a package from `r-releases`
@@ -11,6 +9,10 @@ To install a package from `r-releases` (for example, `jsonlite`), open R and run
 ```r
 install.packages("jsonlite", repos = "https://r-releases.r-universe.dev")
 ```
+
+# Disclaimer
+
+The `r-releases` project is brand new and in its prototype phase. Policies are subject to change.
 
 # How to add your package
 
