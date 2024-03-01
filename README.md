@@ -52,7 +52,7 @@ In the overwhelming majority of cases, the text file for (3) is in URL format: i
 
 # How to edit or remove packages
 
-To edit or remove one or more packages, submit a pull request to edit the files in the [`packages`](https://github.com/r-releases/r-releases/tree/main/packages) folder.
+To edit or remove one or more packages, submit a pull request to edit the files in the [`packages`](https://github.com/r-releases/r-releases/tree/main/packages) folder. To protect the package ecosystem, these kinds of pull requests are always flagged for manual review and never automatically merged.
 
 # Reviewing package contributions and edits
 
