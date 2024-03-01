@@ -42,7 +42,7 @@ The one-time registration process proceeds as follows.
 The overwhelming majority of text files in (3) will be in simple URL format, which has has 3 requirements:
 
 1. The name of the file is the package name.
-2. The file contains only the package URL. The URL must be authentic and genuine. It must be the true location of the package according to its owners. For `r-releases`, this is always the URL of a repository from GitHub or GitLab, such as https://github.com/r-lib/gh.
+2. The file contains a single line with the package URL. The URL must be authentic and genuine. It must be the true location of the package according to its owners. For `r-releases`, this is always the URL of a repository from GitHub or GitLab, such as https://github.com/r-lib/gh.
 3. The file ends with a [newline character](https://stackoverflow.com/questions/729692/why-should-text-files-end-with-a-newline). (A terminating newline is included automatically if you create the file using the GitHub web interface.)
 
 In rare cases, the package may be in a subdirectory of a GitHub repo, in which case the contents of your text file may be a JSON list with fields `package`, `url`, `subdir`, and `branch`, and the `branch` field must be `"*release"`. [Example](https://github.com/r-releases/r-releases/blob/main/packages/paws.analytics):
