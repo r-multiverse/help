@@ -23,13 +23,17 @@ install.packages(
 )
 ```
 
+# Continuous maintainer-driven deployment
+
+After the one-time registration process described below, each package in `r-releases` continuously deploys to `r-universe`. Every new [tag and release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) in your package's GitHub/GitLab repository automatically publishes at <https://r-releases.r-universe.dev> and becomes available to install from there. No matter how many releases you create in your own personal GitHub account, you do not need to interact with `r-releases` again unless you wish to change the link or remove the package from <https://r-releases.r-universe.dev>. In other words, you as the maintainer are in complete control. This painless maintainer-driven experience was made possible by the incredible infrastructure of [rOpenSci's R-universe system](https://ropensci.org/r-universe/) and clever breakthrough insights by [Jeroen Ooms](https://github.com/jeroen/) and [Charlie Gao](https://github.com/shikokuchuo/).
+
 # Before you contribute
 
 The [code of conduct](https://github.com/r-releases/help/blob/main/CODE_OF_CONDUCT.md) governs all forms of participation in the `r-releases` project, including package contributions, issues, discussions, and the development of infrastructure. Both administrators and contributors are subject to its terms.
 
-# How to add your package to `r-releases`
+# How to register your package with `r-releases`
 
-To contribute your package to `r-releases`:
+The one-time registration process proceeds as follows.
 
 1. Put the source code of your R package in a public [GitHub](https://github.com) (or [GitLab](https://gitlab.com)) repository with the `DESCRIPTION` file at the root of the project. Example: <https://github.com/r-lib/gh>.
 2. Create a [tag and release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) for the latest production version of your package. Example: <https://github.com/r-lib/gh/releases/tag/v1.4.0>.
