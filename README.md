@@ -29,7 +29,7 @@ After the one-time registration process described below, each package in `r-rele
 
 # Before you contribute
 
-The [code of conduct](https://github.com/r-releases/help/blob/main/CODE_OF_CONDUCT.md) governs all forms of participation in the `r-releases` project, including package contributions, issues, discussions, and the development of infrastructure. Both administrators and contributors are subject to its terms.
+The [code of conduct](https://github.com/r-releases/help/blob/main/CODE_OF_CONDUCT.md) governs all forms of participation in the `r-releases` project, including package contributions, issues, discussions, and the development of infrastructure. Administrators, moderators, and contributors are all subject to its terms.
 
 # How to register your package with `r-releases`
 
@@ -37,11 +37,17 @@ The one-time registration process proceeds as follows.
 
 1. Put the source code of your R package in a public [GitHub](https://github.com) (or [GitLab](https://gitlab.com)) repository with the `DESCRIPTION` file at the root of the project. Example: <https://github.com/r-lib/gh>.
 2. Create a [tag and release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) for the latest production version of your package. Example: <https://github.com/r-lib/gh/releases/tag/v1.4.0>.
-3. Open a [GitHub pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to <https://github.com/r-releases/r-releases> to contribute a text file to the [`packages` folder](https://github.com/r-releases/r-releases/tree/main/packages). The name of the text file must be the name of your package, and the URL must include the correct owner and the correct repository.
+3. Open a [GitHub pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to <https://github.com/r-releases/r-releases> to contribute one or more text files to the [`packages` folder](https://github.com/r-releases/r-releases/tree/main/packages) with R package listings.
 
-In the overwhelming majority of cases, the text file for (3) is in URL format: it contains a single line with the package URL and a [the standard terminating newline character](https://stackoverflow.com/questions/729692/why-should-text-files-end-with-a-newline) (which the GitHub web interface includes automatically if editing there). In rare exceptions, the package is in a subdirectory of the GitHub repository. If that is the case, then the text file should be a JSON list with fields `package`, `url`, `subdir`, and `branch`, where `branch` must be `"*release"`. Example:
+The overwhelming majority of text files in (3) will be in simple URL format, which has has 3 requirements:
 
-```
+1. The name of the file is the package name.
+2. The file contains a single line with the package URL. The URL must be authentic and genuine. It must be the true location of the package according to its owners. For `r-releases`, this is always the URL of a repository from GitHub or GitLab, such as https://github.com/r-lib/gh.
+3. The file ends with a [newline character](https://stackoverflow.com/questions/729692/why-should-text-files-end-with-a-newline). (A terminating newline is included automatically if you create the file using the GitHub web interface.)
+
+In rare cases, the package may be in a subdirectory of a GitHub repo, in which case the contents of your text file may be a JSON list with fields `package`, `url`, `subdir`, and `branch`, and the `branch` field must be `"*release"`. [Example](https://github.com/r-releases/r-releases/blob/main/packages/paws.analytics):
+
+```json
 {
   "package": "paws.analytics",
   "url": "https://github.com/paws-r/paws",
@@ -54,16 +60,9 @@ In the overwhelming majority of cases, the text file for (3) is in URL format: i
 
 To edit or remove one or more packages, submit a pull request to edit the files in the [`packages`](https://github.com/r-releases/r-releases/tree/main/packages) folder. To protect the package ecosystem, these kinds of pull requests are always flagged for manual review and never automatically merged.
 
-# Reviewing package contributions and edits
+# How pull requests are reviewed
 
-In the vast majority of cases, a periodic GitHub Actions workflow will automatically merge your pull request to incorporate your changes into <https://github.com/r-releases/r-releases>. However, your pull request will be flagged for manual review if:
-
-1. Your pull request changes or removes an existing package entry.
-2. There is something non-standard about a contributed package URL.
-3. The package entry is in JSON format.
-4. There was an error in processing your package contribution.
-
-If you can change your contribution to avoid manual review, please close your pull request and submit a different one. Otherwise, an `r-releases` administrator will manually review your contribution.
+An automated process periodically scans each new pull request to https://github.com/r-releases/r-releases. Depending on the results of the automated checks, the bot automatically merges the pull request, closes it, or flags it for manual review. In the latter case, an `r-releases` moderator will manually review your pull request and contact you if there are questions. For more information on the manual review process and when it gets triggered, please visit <https://github.com/r-releases/help/blob/main/review.md>
 
 # How the R universe is built
 
