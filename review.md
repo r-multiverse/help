@@ -1,4 +1,4 @@
-# Manual review
+# Package contribution reviews
 
 As the [README](https://github.com/r-releases/help/blob/main/README.md) explains, updates to the `r-releases` package listings come from pull requests to https://github.com/r-releases/r-releases from members of the R community. In the vast majority of cases, a GitHub app automatically merges pull request. However, some pull requests need to be manually reviewed by an `r-releases` moderator. This document describes this manual review process. The goals are to:
 
