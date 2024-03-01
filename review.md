@@ -27,7 +27,7 @@ The pull request is automatically flagged for manual review if:
 1. The URL points to an organization or user such as https://github.com/r-lib instead of a repository such as https://github.com/r-lib/gh.
 1. The version-controlled repository name in the URL is different from the name of the file. (For example, if the file is named `gh` package, then the URL https://github.com/r-lib/gh-package would be flagged for manual review, but https://github.com/r-lib/gh would not.)
 1. If the repository is part of the CRAN mirror at https://github.com/cran. (A fundamental goal of `r-releases` is to exist as independently from CRAN as possible.)
-1. If the package is also on CRAN and the URL in the pull request cannot be found in the `DESCRIPTION` file of the latest CRAN release.
+1. If the package is also on CRAN, and the URL in the pull request cannot be found in the `DESCRIPTION` file of the latest CRAN release.
 
 ## The manual review process
 
