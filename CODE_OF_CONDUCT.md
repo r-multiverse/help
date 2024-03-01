@@ -33,7 +33,8 @@ Examples of unacceptable behavior include:
 * Public or private harassment
 * Publishing others' private information, such as a physical or email address,
   without their explicit permission
-* Maliciously attributing the wrong owner or repository in the URL of a package entry contributed to <https://github.com/r-releases/r-releases/tree/main/packages>.
+* Plagiarism
+* Copyright violations
 * Other conduct which could reasonably be considered inappropriate in a
   professional setting
 
