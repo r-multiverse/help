@@ -25,9 +25,10 @@ The pull request is automatically flagged for manual review if:
 1. The URL scheme is anything other than https.
 1. The domain of the URL is anything other than github.com or gitlab.com.
 1. The URL points to an organization or user such as https://github.com/r-lib rather than a repository such as https://github.com/r-lib/gh.
+2. The URL is not online (HTTP error trying to access it).
 1. The version-controlled repository name in the URL is different from the name of the file. (For example, if the file is named `gh` as the package, then the URL https://github.com/r-lib/gh-package would be flagged for manual review, but https://github.com/r-lib/gh would not.)
-1. If the repository is part of the CRAN mirror at https://github.com/cran. (A fundamental goal of `r-releases` is to serve complete package dependency chains without reliance on third-party repositories as far as possible.)
-1. If the package is also on CRAN, and the URL in the pull request cannot be found in the `DESCRIPTION` file of the latest CRAN release.
+1. The repository is part of the CRAN mirror at https://github.com/cran. (A fundamental goal of `r-releases` is to serve complete package dependency chains without reliance on third-party repositories as far as possible.)
+1. The package is also on CRAN, and the URL in the pull request cannot be found in the `DESCRIPTION` file of the latest CRAN release.
 
 ## The manual review process
 
@@ -39,5 +40,6 @@ If a pull request is flagged for manual review, an `r-releases` moderator will r
 1. The text file name must be the name of the package.
 1. For JSON listings, the `"branch"` field must be `"*release"`, the `"subdirectory"` field must be supplied and exist, the `"url"` field must exist and be correct, and the `"package"` field must agree with the name of the text file.
 1. The package name, URL, and all other metadata must be complete and correct.
+1. The URL must be the true/official location of the source code or a faithful mirror of the true location. Unofficial or unsupported forks should not be included. The moderator must use discression on a case-by-case basis because sometimes a fork becomes the the true version (e.g. if the original maintainer abandons a package and becomes unreachable indefinitely).
 1. If the listing of an existing package is modified, then the moderator must verify that the new information is complete and correct. In many cases, it may be necessary to obtain permission from the package maintainer.
 1. The reasons for deleting a package listing may vary on a case-by-case basis, the moderator must carefully consider the impact that deletion would have on the community and on reverse dependencies. In many cases, it may be necessary to obtain permission from the package maintainer.
