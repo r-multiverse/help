@@ -57,7 +57,8 @@ In rare cases, the package may be in a subdirectory of a GitHub repo, in which c
 ```
 
 [![r-releases status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fr-releases.r-universe.dev%2Fapi%2Fpackages%2Fmirai&query=%24.Version&label=r-releases)](https://r-releases.r-universe.dev/mirai)
-To add a dynamic 'r-releases' badge for package readme files, like the one to the left, copy the following markdown construction, replacing 'pkgNAME' with the actual package name in both the places it appears:
+
+To add a dynamic 'r-releases' badge for package readme files, like the one above, copy the following markdown construction, replacing 'pkgNAME' with the actual package name in both the places it appears:
 
 ```md
 [![r-releases status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fr-releases.r-universe.dev%2Fapi%2Fpackages%2FpkgNAMEquery=%24.Version&label=r-releases)](https://r-releases.r-universe.dev/pkgNAME)
