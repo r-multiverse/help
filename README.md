@@ -32,7 +32,7 @@ install.packages(
 
 # Continuous maintainer-driven deployment
 
-Each package only needs to register once. After registration, every new [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) automatically deploys to <https://r-releases.r-universe.dev> without needing to go through R-releases again. In other words, the package maintainer is in complete control. This painless maintainer-driven experience was made possible by the incredible infrastructure of [rOpenSci's R-universe system](https://ropensci.org/r-universe/) and insights from [Jeroen Ooms](https://github.com/jeroen/) and [Charlie Gao](https://github.com/shikokuchuo/).
+Each package only needs to register once. After registration, every new [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) automatically deploys to <https://r-releases.r-universe.dev> without needing to go through R-releases again. In other words, the package maintainer is in complete control. This painless maintainer-driven experience was made possible by the incredible infrastructure of [rOpenSci's R-universe system](https://ropensci.org/r-universe/) and insights from [Jeroen Ooms](https://github.com/jeroen/).
 
 # Before you contribute
 
