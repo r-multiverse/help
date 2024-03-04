@@ -7,7 +7,7 @@ R-releases is a community-curated [R-universe](https://r-releases.r-universe.dev
 A traditional software version cycle begins with the development phase, where myriad bugs are expected, and ends with the production phase, which promises a safe user experience. R-releases is a middle ground in the sense that:
 
 1. Each package release has the full endorsement of its own maintainer. R-releases always gives you a version that its developer chose to distribute for general use.
-2. The user is still responsible for judging whether a package is safe to use. This judgement may require more than a novice understanding of to [testing](https://r-pkgs.org/testing-basics.html), [versions](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number), and non-default installation tools.
+2. The user is still responsible for judging whether a package is safe to use. This judgement may require more than a novice understanding of [testing](https://r-pkgs.org/testing-basics.html), [versions](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number), and non-default installation tools.
 
 # But better than QA
 
