@@ -1,6 +1,6 @@
 # Package contribution reviews
 
-As the [README](https://github.com/r-releases/help/blob/main/README.md) explains, updates to the `r-releases` package listings come from pull requests to https://github.com/r-releases/r-releases from members of the R community. In the vast majority of cases, a GitHub app automatically merges pull request. However, some pull requests need to be manually reviewed by an `r-releases` moderator. This document describes this manual review process. The goals are to:
+As the [README](https://github.com/r-releases/help/blob/main/README.md) explains, updates to the R-releases package listings come from pull requests to https://github.com/r-releases/r-releases from members of the R community. In the vast majority of cases, a GitHub app automatically merges pull request. However, some pull requests need to be manually reviewed by an R-releases moderator. This document describes this manual review process. The goals are to:
 
 1. Ensure that all pull requests are reviewed using a consistent set of standards and principles that do not vary according to moderator.
 2. Ensure these standards and principles are clear and transparent for the R community.
@@ -28,12 +28,12 @@ The pull request is automatically flagged for manual review if:
 1. The URL does not exist or is not online at the time it is checked (HTTP error trying to access it).
 1. A [release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) could not be found at the repo in the URL. (GitHub releases can be found easily, but unfortunately GitLab releases are hard to detect automatically.)
 1. The version-controlled repository name in the URL is different from the name of the file. (For example, if the file is named `gh` as the package, then the URL https://github.com/r-lib/gh-package would be flagged for manual review, but https://github.com/r-lib/gh would not.)
-1. The repository is part of the CRAN mirror at https://github.com/cran. (A fundamental goal of `r-releases` is to serve complete package dependency chains without reliance on third-party repositories as far as possible.)
+1. The repository is part of the CRAN mirror at https://github.com/cran. (A fundamental goal of R-releases is to serve complete package dependency chains without reliance on third-party repositories as far as possible.)
 1. The package is also on CRAN, and the URL in the pull request cannot be found in the `DESCRIPTION` file of the latest CRAN release.
 
 ## The manual review process
 
-If a pull request is flagged for manual review, an `r-releases` moderator will read the pull request and ask questions if necessary. Although the moderator may make optional suggestions on a case-by-case basis, package reviews must be consistent, reliable, and inclusive whenever possible. The decision to close or merge the pull request must be based exclusively on the following pre-defined list of requirements:
+If a pull request is flagged for manual review, an R-releases moderator will read the pull request and ask questions if necessary. Although the moderator may make optional suggestions on a case-by-case basis, package reviews must be consistent, reliable, and inclusive whenever possible. The decision to close or merge the pull request must be based exclusively on the following pre-defined list of requirements:
 
 1. Each contribution must comply with the [code of conduct](https://github.com/r-releases/help/blob/main/CODE_OF_CONDUCT.md). Examples of prohibited content include profanity, malicious behavior, security risks, copyright violations, and other conduct which could reasonably be considered inappropriate in a professional setting. All this applies to the package, the URL, any other metadata in the contribution, and the contents of the package itself. 
 1. Each contributed URL must point to an existing GitHub or GitLab repository.
