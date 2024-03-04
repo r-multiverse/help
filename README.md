@@ -1,10 +1,17 @@
 # R-releases
 
-R-releases is a community-curated [R-universe](https://r-releases.r-universe.dev) of R packages deployed as tags/releases on GitHub. The GitHub repository at <https://github.com/r-releases/r-releases> allows anyone to register packages with the [universe](https://r-releases.r-universe.dev). The project is still in its prototype phase, but the goal is to build a production-ready community-wide CRAN-like repository that incentivizes thorough testing and puts control in the hands of the package maintainers.
+R-releases is a community-curated [R-universe](https://r-releases.r-universe.dev) of R packages releases. The GitHub repository at <https://github.com/r-releases/r-releases> allows anyone to register packages. After a package is registered once, [R-universe](https://r-universe.dev) automatically builds and checks every new release and makes it available to install from https://r-releases.r-universe.dev. In other words, the R-releases package repository is decentralized, and package maintainers have complete control over deployment.
 
-# Disclaimer
+# The QA for R
 
-The R-releases project is brand new and in its prototype phase. It is not ready for widespread production usage, and policies are subject to change.
+A traditional software version cycle begins with the development phase, where myriad bugs are expected, and ends with the production phase, which promises a safe user experience. R-releases is a middle ground in the sense that:
+
+1. Each package release has the full endorsement of its own maintainer. R-releases always gives you a version that its developer chose to distribute for general use.
+2. The user is still responsible for judging whether a package is safe to use. This judgement may require more than a novice understanding of [testing](https://r-pkgs.org/testing-basics.html), [versions](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number), and non-default package installation tools.
+
+# But better than QA
+
+R-releases aims to facilitate production as well. In addition to its encapsulated centralized repository of releases, R-releases will provide modular functions to monitor the health of packages and maintain a healthy local package library. Visit https://github.com/r-releases/help/issues for updates on the development of these features.
 
 # How to install a package from R-releases
 
@@ -25,7 +32,7 @@ install.packages(
 
 # Continuous maintainer-driven deployment
 
-After the one-time registration process described below, each package in R-releases continuously deploys to R-universe. Every new [tag and release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) in your package's GitHub/GitLab repository automatically publishes at <https://r-releases.r-universe.dev> and becomes available to install from there. No matter how many releases you create in your own personal GitHub account, you do not need to interact with R-releases again unless you wish to change the link or remove the package from <https://r-releases.r-universe.dev>. In other words, you as the maintainer are in complete control. This painless maintainer-driven experience was made possible by the incredible infrastructure of [rOpenSci's R-universe system](https://ropensci.org/r-universe/) and insights from [Jeroen Ooms](https://github.com/jeroen/).
+Each package only needs to register once. After registration, every new [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) automatically deploys to <https://r-releases.r-universe.dev> without needing to go through R-releases again. In other words, the package maintainer is in complete control. This painless maintainer-driven experience was made possible by the incredible infrastructure of [rOpenSci's R-universe system](https://ropensci.org/r-universe/) and insights from [Jeroen Ooms](https://github.com/jeroen/).
 
 # Before you contribute
 
@@ -55,7 +62,7 @@ In rare cases, the package may be in a subdirectory of a GitHub repo, in which c
   "branch": "*release"
 }
 ```
-<br />
+<br/>
 
 [![R-releases status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fr-releases.r-universe.dev%2Fapi%2Fpackages%2Fmirai&query=%24.Version&label=R-releases)](https://r-releases.r-universe.dev/mirai)
 
