@@ -35,14 +35,14 @@ The [code of conduct](https://github.com/r-releases/help/blob/main/CODE_OF_CONDU
 
 The one-time registration process proceeds as follows.
 
-1. Put the source code of your R package in a public [GitHub](https://github.com) (or [GitLab](https://gitlab.com)) repository with the `DESCRIPTION` file at the root of the project. Example: <https://github.com/r-lib/gh>.
-2. Create a [tag and release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) for the latest production version of your package. Example: <https://github.com/r-lib/gh/releases/tag/v1.4.0>.
+1. Ensure that the package source code exists in a public [GitHub](https://github.com) (or [GitLab](https://gitlab.com)) repository with the `DESCRIPTION` file at the root of the project. Example: <https://github.com/r-lib/gh>.
+2. Ensure that the package has a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) for the latest production version of your package. Example: <https://github.com/r-lib/gh/releases/tag/v1.4.0>.
 3. Open a [GitHub pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to <https://github.com/r-releases/r-releases> to contribute one or more text files to the [`packages` folder](https://github.com/r-releases/r-releases/tree/main/packages) with R package listings.
 
 The overwhelming majority of text files in (3) will be in simple URL format, which has has 3 requirements:
 
 1. The name of the file is the package name.
-2. The file contains a single line with the package URL. The URL must be authentic and genuine. It must be the true location of the package according to its owners. For `r-releases`, this is always the URL of a repository from GitHub or GitLab, such as https://github.com/r-lib/gh.
+2. The file contains a single line with the package URL. The URL must be authentic and genuine. It must be the true GitHub/GitLab location of the package according to its owners, or an active mirror of the true location.
 3. The file ends with a [newline character](https://stackoverflow.com/questions/729692/why-should-text-files-end-with-a-newline). (A terminating newline is included automatically if you create the file using the GitHub web interface.)
 
 In rare cases, the package may be in a subdirectory of a GitHub repo, in which case the contents of your text file may be a JSON list with fields `package`, `url`, `subdir`, and `branch`, and the `branch` field must be `"*release"`. [Example](https://github.com/r-releases/r-releases/blob/main/packages/paws.analytics):
