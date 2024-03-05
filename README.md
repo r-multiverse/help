@@ -2,7 +2,7 @@
 
 R-releases is a community-curated [R-universe](https://r-releases.r-universe.dev) of R packages releases. The GitHub repository at <https://github.com/r-releases/r-releases> allows anyone to register packages. After a package is registered once, [R-universe](https://r-universe.dev) automatically builds and checks every new release and makes it available to install from https://r-releases.r-universe.dev. In other words, the R-releases package repository is decentralized, and package maintainers have complete control over deployment.
 
-# The QA for R
+# The QA for R packages
 
 A traditional software version cycle begins with the development phase, where myriad bugs are expected, and ends with the production phase, which promises a safe user experience. R-releases is a middle ground in the sense that:
 
