@@ -2,7 +2,7 @@
 
 R-releases is a decentralized maintainer-driven repository of R package releases.
 
-Anyone can register packages in the GitHub repository at https://github.com/r-releases/r-releases. Once a package is registered, R-universe automatically builds and checks every new release and makes it available to install from https://r-releases.r-universe.dev/. Package maintainers have complete control over deployment.
+Anyone can register packages in the GitHub repository at https://github.com/r-releases/r-releases. Once a package is registered, [R-universe](https://r-universe.dev/) automatically builds and checks every new release and makes it available to install from https://r-releases.r-universe.dev/. Package maintainers have complete control over deployment.
 
 The R-releases effort originated from the [R Consortium Repositories Working Group](https://github.com/RConsortium/r-repositories-wg).
 
