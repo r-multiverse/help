@@ -1,4 +1,4 @@
-# R-releases <a href="https://r-releases.r-universe.dev"><img src="logo/logo.png" align="right" height="140" /></a>
+# R-releases <a href="https://r-releases.r-universe.dev"><img src="logo/logo-readme.png" align="right" height="140" /></a>
 
 R-releases is a decentralized maintainer-driven repository of R package releases.
 
