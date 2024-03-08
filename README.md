@@ -22,12 +22,6 @@ R-releases aims to facilitate production as well. In addition to its encapsulate
 To install a package from R-releases (for example, `jsonlite`), open R and run:
 
 ```r
-install.packages("jsonlite", repos = "https://r-releases.r-universe.dev")
-```
-
-If the package has dependencies in CRAN but not R-releases, please contribute them to R-releases as described below. As a temporary workaround for installation, you can include CRAN as a backup:
-
-```r
 install.packages(
   "jsonlite",
   repos = c("https://r-releases.r-universe.dev", "https://cloud.r-project.org")
@@ -46,7 +40,7 @@ The [code of conduct](https://github.com/r-releases/help/blob/main/CODE_OF_CONDU
 
 The one-time registration process proceeds as follows.
 
-1. Ensure that the package source code exists in a public [GitHub](https://github.com) (or [GitLab](https://gitlab.com)) repository with the `DESCRIPTION` file at the root of the project. Example: <https://github.com/r-lib/gh>.
+1. Ensure that the package source code exists in a public [GitHub](https://github.com) or [GitLab](https://gitlab.com) repository with the `DESCRIPTION` file at the root of the project. Example: <https://github.com/r-lib/gh>.
 2. Ensure that the package has a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) for the latest production version of your package. Example: <https://github.com/r-lib/gh/releases/tag/v1.4.0>.
 3. Open a [GitHub pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to <https://github.com/r-releases/r-releases> to contribute one or more text files to the [`packages` folder](https://github.com/r-releases/r-releases/tree/main/packages) with R package listings.
 
