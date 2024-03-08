@@ -13,10 +13,6 @@ A traditional software version cycle begins with the development phase, where my
 1. Each package release has the full endorsement of its own maintainer. R-releases always gives you a version that its developer chose to distribute for general use.
 2. The user is still responsible for judging whether a package is safe to use. This judgement may require more than a novice understanding of [testing](https://r-pkgs.org/testing-basics.html), [versions](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number), and non-default package installation tools.
 
-# But better than QA
-
-R-releases aims to facilitate production as well. In addition to its encapsulated centralized repository of releases, R-releases will provide modular functions to monitor the health of packages and maintain a healthy local package library. Visit https://github.com/r-releases/help/issues for updates on the development of these features.
-
 # How to install a package from R-releases
 
 To install a package from R-releases (for example, `jsonlite`), open R and run:
