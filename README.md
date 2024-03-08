@@ -8,7 +8,7 @@ The R-releases effort originated from the [R Consortium Repositories Working Gro
 
 # For R-Universers
 
-> Build within your organization, share with the Community
+> Develop within your organization, release to the Community
 
 Share package releases directly with the wider community you are connected to. Contributing a package to R-releases allows the seamless co-existence of the development version within your organization Universe. Requiring no change to your existing configuration or workflow - have the best of both worlds.
 
