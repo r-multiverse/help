@@ -11,14 +11,21 @@
     "href": "index.html#the-quality-assurance-qa-for-r-packages",
     "title": "R-releases",
     "section": "The Quality Assurance (QA) for R packages",
-    "text": "The Quality Assurance (QA) for R packages\nA traditional software version cycle begins with the development phase, where bugs are expected and ironed out, and ends with the production phase, which promises a seamless user experience. R-releases aims at a space just before production in that:\n\nEach package release has the full endorsement of its own maintainer. R-releases always gives you a version that its developer chose to distribute for general use.\nThe user is still responsible for judging whether a package is appropriate to use. This judgement may require more than a novice understanding of testing, versions, and package compatibility."
+    "text": "The Quality Assurance (QA) for R packages\nA traditional software version cycle begins with the development phase, where bugs are expected and ironed out, and ends with the production phase, which promises a seamless user experience. R-releases aims at a space just before production, commonly referred to as QA, in that:\n\nEach package release has the full endorsement of its own maintainer. R-releases always gives you a version that its developer chose to distribute for general use.\nThe user is still responsible for judging whether a package is appropriate to use. This judgement may require more than a novice understanding of testing, versions, and package compatibility."
   },
   {
     "objectID": "index.html#continuous-maintainer-driven-deployment",
     "href": "index.html#continuous-maintainer-driven-deployment",
     "title": "R-releases",
     "section": "Continuous maintainer-driven deployment",
-    "text": "Continuous maintainer-driven deployment\nEach package only needs to be contributed to the community once. Every new release automatically deploys to https://r-releases.r-universe.dev without needing to go through R-releases again. In other words, the package maintainer is in complete control. This painless maintainer-driven experience was made possible by the incredible infrastructure of rOpenSci’s R-universe system and key insights from Jeroen Ooms."
+    "text": "Continuous maintainer-driven deployment\nEach package only needs to be registered once. Every new release automatically deploys to https://r-releases.r-universe.dev without needing to go through R-releases again. In other words, the package maintainer is in complete control. This painless maintainer-driven experience was made possible by the incredible infrastructure of rOpenSci’s R-universe system and key insights from Jeroen Ooms."
+  },
+  {
+    "objectID": "index.html#what-about-my-personal-r-universe",
+    "href": "index.html#what-about-my-personal-r-universe",
+    "title": "R-releases",
+    "section": "What about my personal R-universe?",
+    "text": "What about my personal R-universe?\nYou can still maintain a separate R-universe for yourself or your organization. This can continue to hold either release or development versions for yourself and your colleagues. At the same time, R-releases deploys the latest package releases directly to the wider community."
   },
   {
     "objectID": "contributors.html",
@@ -32,7 +39,7 @@
     "href": "contributors.html#how-to-register-your-package-with-r-releases",
     "title": "Contributors",
     "section": "How to register your package with R-releases",
-    "text": "How to register your package with R-releases\nThe one-time registration process proceeds as follows.\n\nEnsure that the package source code exists in a public GitHub or GitLab repository with the DESCRIPTION file at the root of the project. Example: https://github.com/r-lib/gh.\nEnsure that the package has a release for the latest production version of your package. Example: https://github.com/r-lib/gh/releases/tag/v1.4.0.\nOpen a GitHub pull request to https://github.com/r-releases/r-releases to contribute one or more text files to the packages folder with R package listings.\n\nThe overwhelming majority of text files in (3) will be in simple URL format, which has has 3 requirements:\n\nThe name of the file is the package name.\nThe file contains a single line with the package URL. The URL must be authentic and genuine. It must be the true GitHub/GitLab location of the package according to its owners, or an active mirror of the true location.\nThe file ends with a newline character. (A terminating newline is included automatically if you create the file using the GitHub web interface.)\n\nIn rare cases, the package may be in a subdirectory of a GitHub repo, in which case the contents of your text file may be a JSON list with fields package, url, subdir, and branch, and the branch field must be \"*release\". Example:\n{\n  \"package\": \"paws.analytics\",\n  \"url\": \"https://github.com/paws-r/paws\",\n  \"subdir\": \"cran/paws.analytics\",\n  \"branch\": \"*release\"\n}\n\nTo add a dynamic ‘R-releases’ badge for package readme files, like the one above, copy the following markdown snippet, replacing ‘pkgNAME’ with the actual package name in both places it appears:\n[![R-releases status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fr-releases.r-universe.dev%2Fapi%2Fpackages%2FpkgNAMEquery=%24.Version&label=R-releases)](https://r-releases.r-universe.dev/pkgNAME)"
+    "text": "How to register your package with R-releases\nThe one-time registration process proceeds as follows:\n\nEnsure that the package source code exists in a public GitHub or GitLab repository with the DESCRIPTION file at the root of the project. Example: https://github.com/r-lib/gh.\nEnsure that the package has a release for the latest production version of your package. Example: https://github.com/r-lib/gh/releases/tag/v1.4.0.\nOpen a GitHub pull request to https://github.com/r-releases/r-releases to contribute one or more text files to the packages folder with R package listings.\n\nThe overwhelming majority of text files in (3) will be in simple URL format, which has has 3 requirements:\n\nThe name of the file is the package name.\nThe file contains a single line with the package URL. The URL must be authentic and genuine. It must be the true GitHub/GitLab location of the package according to its owners, or an active mirror of the true location.\nThe file ends with a newline character. (A terminating newline is included automatically if you create the file using the GitHub web interface.)\n\nIn rare cases, the package may be in a subdirectory of a GitHub repo, in which case the contents of your text file may be a JSON list with fields package, url, subdir, and branch, and the branch field must be \"*release\". Example:\n{\n  \"package\": \"paws.analytics\",\n  \"url\": \"https://github.com/paws-r/paws\",\n  \"subdir\": \"cran/paws.analytics\",\n  \"branch\": \"*release\"\n}\n\nTo add a dynamic ‘R-releases’ badge for package readme files, like the one above, copy the following markdown snippet, replacing ‘pkgNAME’ with the actual package name in both places it appears:\n[![R-releases status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fr-releases.r-universe.dev%2Fapi%2Fpackages%2FpkgNAMEquery=%24.Version&label=R-releases)](https://r-releases.r-universe.dev/pkgNAME)"
   },
   {
     "objectID": "contributors.html#how-to-edit-or-remove-packages",
@@ -74,28 +81,28 @@
     "href": "users.html",
     "title": "Users",
     "section": "",
-    "text": "To use packages from R-releases, simply add it to your repository settings:\noptions(repos = c(\"https://r-releases.r-universe.dev\", getOption(\"repos\")))\nThe R language natively supports multiple repositories as a core feature, and the above only needs to be run once per session. We recommend adding it to your .Rprofile so that it is always available.\nAlternatively, to only fetch packages from R-universe that are not on CRAN:\noptions(repos = c(getOption(\"repos\"), \"https://r-releases.r-universe.dev\"))\nThen proceed to use install.packages() as you would normally."
+    "text": "Simply add R-releases to your repository settings:\noptions(repos = c(\"https://r-releases.r-universe.dev\", getOption(\"repos\")))\nR natively supports multiple repositories as a core language feature, and the above only needs to be set once per session. We recommend adding it to your .Rprofile so that it is always available.\nAlternatively, to prioritize CRAN over R-releases:\noptions(repos = c(getOption(\"repos\"), \"https://r-releases.r-universe.dev\"))\nThen proceed to use install.packages() as you would normally."
   },
   {
     "objectID": "users.html#how-to-install-a-package-from-r-releases",
     "href": "users.html#how-to-install-a-package-from-r-releases",
     "title": "Users",
     "section": "",
-    "text": "To use packages from R-releases, simply add it to your repository settings:\noptions(repos = c(\"https://r-releases.r-universe.dev\", getOption(\"repos\")))\nThe R language natively supports multiple repositories as a core feature, and the above only needs to be run once per session. We recommend adding it to your .Rprofile so that it is always available.\nAlternatively, to only fetch packages from R-universe that are not on CRAN:\noptions(repos = c(getOption(\"repos\"), \"https://r-releases.r-universe.dev\"))\nThen proceed to use install.packages() as you would normally."
+    "text": "Simply add R-releases to your repository settings:\noptions(repos = c(\"https://r-releases.r-universe.dev\", getOption(\"repos\")))\nR natively supports multiple repositories as a core language feature, and the above only needs to be set once per session. We recommend adding it to your .Rprofile so that it is always available.\nAlternatively, to prioritize CRAN over R-releases:\noptions(repos = c(getOption(\"repos\"), \"https://r-releases.r-universe.dev\"))\nThen proceed to use install.packages() as you would normally."
   },
   {
     "objectID": "users.html#ensuring-your-package-is-always-available",
     "href": "users.html#ensuring-your-package-is-always-available",
     "title": "Users",
     "section": "Ensuring your package is always available",
-    "text": "Ensuring your package is always available\nR-releases is designed to work seamlessly alongside CRAN. By prioritizing CRAN in the settings above, you can always be sure that you get your packages from CRAN (if you prefer), only using R-releases as a fall-back.\nFor any number of possible reasons, a package may become unavailable on CRAN at any time due to its strict archival policy.\n\nOften due to archival of a strong dependency - which automatically archives all of its reverse depedencies at short notice - and is outside of the maintainer’s control.\nSituations are often temporary, but may take an extended time to resolve.\n\nBy contributing a package that you rely on to R-releases, you can ensure that it remains available for your critical workflows."
+    "text": "Ensuring your package is always available\nR-releases is designed to work seamlessly alongside CRAN. By prioritizing CRAN in the settings above, you can choose to still get your packages from CRAN, only using R-releases as a fall-back.\nFor any number of possible reasons, a package may become unavailable on CRAN at any time due to its strict archival policy.\n\nOften due to archival of a strong dependency (which automatically archives all of its reverse depedencies at short notice) and is outside of the maintainer’s control.\nSituations can be temporary, but may take an extended time to resolve.\n\nBy contributing a package that you rely on, you can ensure that it remains available for your critical workflows."
   },
   {
-    "objectID": "users.html#providing-updates-direct-from-maintainers",
-    "href": "users.html#providing-updates-direct-from-maintainers",
+    "objectID": "users.html#faster-updates-direct-from-maintainers",
+    "href": "users.html#faster-updates-direct-from-maintainers",
     "title": "Users",
-    "section": "Providing updates direct from maintainers",
-    "text": "Providing updates direct from maintainers\nSome maintainers actively use R-releases as a faster release channel, especially for packages under active and intensive development. CRAN is an archival network first and foremost, and its policy restricts the frequency of package updates.\nIn such cases, newer package versions containing critical updates or bug fixes may be made available on R-releases at an earlier time.\nIf a package maintainer recommends you to install a package from R-releases, please prioritize R-releases in front of CRAN in the repository settings above."
+    "section": "Faster updates direct from maintainers",
+    "text": "Faster updates direct from maintainers\nMaintainers may choose to use R-releases as a faster release channel, especially for packages under intensive development.\nCRAN is first and foremost an archival network, and its policy restricts the frequency of package updates. R-releases allows the timely dissemination of newer package versions containing critical updates or bug fixes.\nIf a package maintainer recommends you to install a package from R-releases, please prioritize R-releases in front of CRAN in the repository settings above."
   },
   {
     "objectID": "review.html",

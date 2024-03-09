@@ -152,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#how-to-install-a-package-from-r-releases" id="toc-how-to-install-a-package-from-r-releases" class="nav-link active" data-scroll-target="#how-to-install-a-package-from-r-releases">How to install a package from R-releases</a></li>
   <li><a href="#ensuring-your-package-is-always-available" id="toc-ensuring-your-package-is-always-available" class="nav-link" data-scroll-target="#ensuring-your-package-is-always-available">Ensuring your package is always available</a></li>
-  <li><a href="#providing-updates-direct-from-maintainers" id="toc-providing-updates-direct-from-maintainers" class="nav-link" data-scroll-target="#providing-updates-direct-from-maintainers">Providing updates direct from maintainers</a></li>
+  <li><a href="#faster-updates-direct-from-maintainers" id="toc-faster-updates-direct-from-maintainers" class="nav-link" data-scroll-target="#faster-updates-direct-from-maintainers">Faster updates direct from maintainers</a></li>
   </ul>
 </nav>
     </div>
@@ -178,27 +178,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="how-to-install-a-package-from-r-releases" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-install-a-package-from-r-releases">How to install a package from R-releases</h2>
-<p>To use packages from R-releases, simply add it to your repository settings:</p>
+<p>Simply add R-releases to your repository settings:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://r-releases.r-universe.dev"</span>, <span class="fu">getOption</span>(<span class="st">"repos"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The R language natively supports multiple repositories as a core feature, and the above only needs to be run once per session. We recommend adding it to your <code>.Rprofile</code> so that it is always available.</p>
-<p>Alternatively, to only fetch packages from R-universe that are not on CRAN:</p>
+<p>R natively supports multiple repositories as a core language feature, and the above only needs to be set once per session. We recommend adding it to your <code>.Rprofile</code> so that it is always available.</p>
+<p>Alternatively, to prioritize CRAN over R-releases:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="fu">getOption</span>(<span class="st">"repos"</span>), <span class="st">"https://r-releases.r-universe.dev"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Then proceed to use <code>install.packages()</code> as you would normally.</p>
 </section>
 <section id="ensuring-your-package-is-always-available" class="level2">
 <h2 class="anchored" data-anchor-id="ensuring-your-package-is-always-available">Ensuring your package is always available</h2>
-<p>R-releases is designed to work seamlessly alongside CRAN. By prioritizing CRAN in the settings above, you can always be sure that you get your packages from CRAN (if you prefer), only using R-releases as a fall-back.</p>
+<p>R-releases is designed to work seamlessly alongside CRAN. By prioritizing CRAN in the settings above, you can choose to still get your packages from CRAN, only using R-releases as a fall-back.</p>
 <p>For any number of possible reasons, a package may become unavailable on CRAN at any time due to its strict archival policy.</p>
 <ul>
-<li>Often due to archival of a strong dependency - which automatically archives all of its reverse depedencies at short notice - and is outside of the maintainer’s control.</li>
-<li>Situations are often temporary, but may take an extended time to resolve.</li>
+<li>Often due to archival of a strong dependency (which automatically archives all of its reverse depedencies at short notice) and is outside of the maintainer’s control.</li>
+<li>Situations can be temporary, but may take an extended time to resolve.</li>
 </ul>
-<p>By <a href="contributors.html">contributing</a> a package that you rely on to R-releases, you can ensure that it remains available for your critical workflows.</p>
+<p>By <a href="contributors.html">contributing</a> a package that you rely on, you can ensure that it remains available for your critical workflows.</p>
 </section>
-<section id="providing-updates-direct-from-maintainers" class="level2">
-<h2 class="anchored" data-anchor-id="providing-updates-direct-from-maintainers">Providing updates direct from maintainers</h2>
-<p>Some maintainers actively use R-releases as a faster release channel, especially for packages under active and intensive development. CRAN is an archival network first and foremost, and its policy restricts the frequency of package updates.</p>
-<p>In such cases, newer package versions containing critical updates or bug fixes may be made available on R-releases at an earlier time.</p>
+<section id="faster-updates-direct-from-maintainers" class="level2">
+<h2 class="anchored" data-anchor-id="faster-updates-direct-from-maintainers">Faster updates direct from maintainers</h2>
+<p>Maintainers may choose to use R-releases as a faster release channel, especially for packages under intensive development.</p>
+<p>CRAN is first and foremost an archival network, and its policy restricts the frequency of package updates. R-releases allows the timely dissemination of newer package versions containing critical updates or bug fixes.</p>
 <p>If a package maintainer recommends you to install a package from R-releases, please prioritize R-releases in front of CRAN in the repository settings above.</p>
 
 
