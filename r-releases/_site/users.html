@@ -155,8 +155,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#how-to-install-a-package-from-r-releases" id="toc-how-to-install-a-package-from-r-releases" class="nav-link active" data-scroll-target="#how-to-install-a-package-from-r-releases">How to install a package from R-releases</a></li>
-  <li><a href="#ensuring-your-package-is-always-available" id="toc-ensuring-your-package-is-always-available" class="nav-link" data-scroll-target="#ensuring-your-package-is-always-available">Ensuring your package is always available</a></li>
-  <li><a href="#faster-updates-direct-from-maintainers" id="toc-faster-updates-direct-from-maintainers" class="nav-link" data-scroll-target="#faster-updates-direct-from-maintainers">Faster updates direct from maintainers</a></li>
+  <li><a href="#a-home-for-non-cran-packages" id="toc-a-home-for-non-cran-packages" class="nav-link" data-scroll-target="#a-home-for-non-cran-packages">A home for non-CRAN packages</a></li>
+  <li><a href="#a-guarantee-of-package-availability" id="toc-a-guarantee-of-package-availability" class="nav-link" data-scroll-target="#a-guarantee-of-package-availability">A guarantee of package availability</a></li>
+  <li><a href="#a-direct-distribution-channel-from-maintainers" id="toc-a-direct-distribution-channel-from-maintainers" class="nav-link" data-scroll-target="#a-direct-distribution-channel-from-maintainers">A direct distribution channel from maintainers</a></li>
   </ul>
 </nav>
     </div>
@@ -189,18 +190,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="fu">getOption</span>(<span class="st">"repos"</span>), <span class="st">"https://r-releases.r-universe.dev"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Then proceed to use <code>install.packages()</code> as you would normally.</p>
 </section>
-<section id="ensuring-your-package-is-always-available" class="level2">
-<h2 class="anchored" data-anchor-id="ensuring-your-package-is-always-available">Ensuring your package is always available</h2>
-<p>R-releases is designed to work seamlessly alongside CRAN. By prioritizing CRAN in the settings above, you can choose to still get your packages from CRAN, only using R-releases as a fall-back.</p>
-<p>For any number of possible reasons, a package may become unavailable on CRAN at any time due to its strict archival policy.</p>
+<section id="a-home-for-non-cran-packages" class="level2">
+<h2 class="anchored" data-anchor-id="a-home-for-non-cran-packages">A home for non-CRAN packages</h2>
+<p>Many R packages do not belong on CRAN.</p>
 <ul>
-<li>Often due to archival of a strong dependency (which automatically archives all of its reverse depedencies at short notice) and is outside of the maintainer’s control.</li>
+<li>In particular, packages containing compiled code may require toolchains or binary downloads that fall outside of current CRAN policy.</li>
+</ul>
+<p>By <a href="contributors.html">contributing</a> a package to R-releases, you may conveniently install the latest released versions of these packages from a single repository location.</p>
+</section>
+<section id="a-guarantee-of-package-availability" class="level2">
+<h2 class="anchored" data-anchor-id="a-guarantee-of-package-availability">A guarantee of package availability</h2>
+<p>R-releases is designed to work seamlessly alongside CRAN. By prioritizing CRAN in the settings above, you can choose to still get your packages from CRAN, only using R-releases as a fall-back.</p>
+<p>A package may become unavailable on CRAN at any time due to its strict archival policy.</p>
+<ul>
+<li>Sometimes due to the archival of a dependency, and outside the direct control of the maintainer.</li>
 <li>Situations can be temporary, but may take an extended time to resolve.</li>
 </ul>
 <p>By <a href="contributors.html">contributing</a> a package that you rely on, you can ensure that it remains available for your critical workflows.</p>
 </section>
-<section id="faster-updates-direct-from-maintainers" class="level2">
-<h2 class="anchored" data-anchor-id="faster-updates-direct-from-maintainers">Faster updates direct from maintainers</h2>
+<section id="a-direct-distribution-channel-from-maintainers" class="level2">
+<h2 class="anchored" data-anchor-id="a-direct-distribution-channel-from-maintainers">A direct distribution channel from maintainers</h2>
 <p>Maintainers may choose to use R-releases as a faster release channel, especially for packages under intensive development.</p>
 <p>CRAN is first and foremost an archival network, and its policy restricts the frequency of package updates. R-releases allows the timely dissemination of newer package versions containing critical updates or bug fixes.</p>
 <p>If a package maintainer recommends you to install a package from R-releases, please prioritize R-releases in front of CRAN in the repository settings above.</p>

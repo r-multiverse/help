@@ -20,21 +20,30 @@ options(repos = c(getOption("repos"), "https://r-releases.r-universe.dev"))
 
 Then proceed to use `install.packages()` as you would normally.
 
-## Ensuring your package is always available
+## A home for non-CRAN packages
+
+Many R packages do not belong on CRAN.
+
+- In particular, packages containing compiled code may require toolchains or binary downloads that fall outside of current CRAN policy.
+
+By [contributing](contributors.html) a package to R-releases, you may conveniently install the latest released versions of these packages from a single repository location.
+
+## A guarantee of package availability
 
 R-releases is designed to work seamlessly alongside CRAN. By prioritizing CRAN in the settings above, you can choose to still get your packages from CRAN, only using R-releases as a fall-back.
 
-For any number of possible reasons, a package may become unavailable on CRAN at any time due to its strict archival policy. 
+A package may become unavailable on CRAN at any time due to its strict archival policy.
 
-- Often due to archival of a strong dependency (which automatically archives all of its reverse depedencies at short notice) and is outside of the maintainer's control.
+- Sometimes due to the archival of a dependency, and outside the direct control of the maintainer.
 - Situations can be temporary, but may take an extended time to resolve.
 
 By [contributing](contributors.html) a package that you rely on, you can ensure that it remains available for your critical workflows.
 
-## Faster updates direct from maintainers
+## A direct distribution channel from maintainers
 
 Maintainers may choose to use R-releases as a faster release channel, especially for packages under intensive development. 
 
 CRAN is first and foremost an archival network, and its policy restricts the frequency of package updates. R-releases allows the timely dissemination of newer package versions containing critical updates or bug fixes.
 
 If a package maintainer recommends you to install a package from R-releases, please prioritize R-releases in front of CRAN in the repository settings above.
+
