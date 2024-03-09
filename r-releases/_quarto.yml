@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "R-releases"
+  navbar:
+    logo: "logo/logo-readme.png"
+    left:
+      - href: index.qmd
+        text: Home
+      - users.qmd
+      - contributors.qmd
+      - review.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
