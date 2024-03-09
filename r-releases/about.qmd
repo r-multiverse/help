@@ -1,0 +1,21 @@
+---
+title: "What is R-releases?"
+---
+
+## The Quality Assurance (QA) for R packages
+
+A traditional software version cycle begins with the development phase, where bugs are expected and ironed out, and ends with the production phase, which promises a seamless user experience.
+
+R-releases aims at a space just before production, commonly referred to as QA, in that:
+
+1. Each package release has the full endorsement of its own maintainer. R-releases always gives you a version that its developer chose to distribute for general use.
+2. The user is still responsible for judging whether a package is appropriate to use. This judgement may require more than a novice understanding of [testing](https://r-pkgs.org/testing-basics.html), [versions](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number), and package compatibility.
+
+
+## Continuous maintainer-driven deployment
+
+Each package only needs to be registered once. Every new [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) automatically deploys to <https://r-releases.r-universe.dev> without needing to go through R-releases again. In other words, the package maintainer is in complete control. This painless maintainer-driven experience was made possible by the incredible infrastructure of [rOpenSci's R-universe system](https://ropensci.org/r-universe/) and key insights from [Jeroen Ooms](https://github.com/jeroen/).
+
+## What about my personal R-universe?
+
+You can still maintain a separate R-universe for yourself or your organization. This can continue to hold either release or development versions for yourself and your colleagues. At the same time, R-releases deploys the latest package releases directly to the wider community.

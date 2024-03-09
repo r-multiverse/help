@@ -1,31 +1,80 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "R-releases",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "What is R-releases?",
     "section": "",
-    "text": "R-releases is a community-curated, maintainer-driven repository of R package releases.\nAnyone can contribute packages in the GitHub repository at https://github.com/r-releases/r-releases. Once a package is registered, R-universe automatically builds and checks every new release and makes it available to install from https://r-releases.r-universe.dev/. Package maintainers have complete control over deployment.\nThe R-releases effort originated from the R Consortium Repositories Working Group."
+    "text": "A traditional software version cycle begins with the development phase, where bugs are expected and ironed out, and ends with the production phase, which promises a seamless user experience.\nR-releases aims at a space just before production, commonly referred to as QA, in that:\n\nEach package release has the full endorsement of its own maintainer. R-releases always gives you a version that its developer chose to distribute for general use.\nThe user is still responsible for judging whether a package is appropriate to use. This judgement may require more than a novice understanding of testing, versions, and package compatibility."
   },
   {
-    "objectID": "index.html#the-quality-assurance-qa-for-r-packages",
-    "href": "index.html#the-quality-assurance-qa-for-r-packages",
-    "title": "R-releases",
-    "section": "The Quality Assurance (QA) for R packages",
-    "text": "The Quality Assurance (QA) for R packages\nA traditional software version cycle begins with the development phase, where bugs are expected and ironed out, and ends with the production phase, which promises a seamless user experience. R-releases aims at a space just before production, commonly referred to as QA, in that:\n\nEach package release has the full endorsement of its own maintainer. R-releases always gives you a version that its developer chose to distribute for general use.\nThe user is still responsible for judging whether a package is appropriate to use. This judgement may require more than a novice understanding of testing, versions, and package compatibility."
+    "objectID": "about.html#the-quality-assurance-qa-for-r-packages",
+    "href": "about.html#the-quality-assurance-qa-for-r-packages",
+    "title": "What is R-releases?",
+    "section": "",
+    "text": "A traditional software version cycle begins with the development phase, where bugs are expected and ironed out, and ends with the production phase, which promises a seamless user experience.\nR-releases aims at a space just before production, commonly referred to as QA, in that:\n\nEach package release has the full endorsement of its own maintainer. R-releases always gives you a version that its developer chose to distribute for general use.\nThe user is still responsible for judging whether a package is appropriate to use. This judgement may require more than a novice understanding of testing, versions, and package compatibility."
   },
   {
-    "objectID": "index.html#continuous-maintainer-driven-deployment",
-    "href": "index.html#continuous-maintainer-driven-deployment",
-    "title": "R-releases",
+    "objectID": "about.html#continuous-maintainer-driven-deployment",
+    "href": "about.html#continuous-maintainer-driven-deployment",
+    "title": "What is R-releases?",
     "section": "Continuous maintainer-driven deployment",
     "text": "Continuous maintainer-driven deployment\nEach package only needs to be registered once. Every new release automatically deploys to https://r-releases.r-universe.dev without needing to go through R-releases again. In other words, the package maintainer is in complete control. This painless maintainer-driven experience was made possible by the incredible infrastructure of rOpenSci’s R-universe system and key insights from Jeroen Ooms."
   },
   {
-    "objectID": "index.html#what-about-my-personal-r-universe",
-    "href": "index.html#what-about-my-personal-r-universe",
-    "title": "R-releases",
+    "objectID": "about.html#what-about-my-personal-r-universe",
+    "href": "about.html#what-about-my-personal-r-universe",
+    "title": "What is R-releases?",
     "section": "What about my personal R-universe?",
     "text": "What about my personal R-universe?\nYou can still maintain a separate R-universe for yourself or your organization. This can continue to hold either release or development versions for yourself and your colleagues. At the same time, R-releases deploys the latest package releases directly to the wider community."
+  },
+  {
+    "objectID": "review.html",
+    "href": "review.html",
+    "title": "Review Policy",
+    "section": "",
+    "text": "As the contributors page explains, updates to the R-releases package listings come from pull requests to https://github.com/r-releases/r-releases from members of the R community. In the vast majority of cases, a GitHub app automatically merges the pull request. However, some pull requests need to be manually reviewed by an R-releases moderator. This document describes this manual review process. The goals are to:"
+  },
+  {
+    "objectID": "review.html#the-automated-review-process",
+    "href": "review.html#the-automated-review-process",
+    "title": "Review Policy",
+    "section": "The automated review process",
+    "text": "The automated review process\nThe review_pull_requests.yaml GitHub Actions workflow runs periodically and reviews each new open pull request using r.releases.utils::review_pull_request(). Depending on the results of the automated checks, the bot will automatically merge the pull request, close it, or flag it for manual review. The bot will post an informative comment explaining the decision, and it may add a GitHub label to the pull request for triage purposes.\nThe pull request is automatically closed if:\n\nIt attempts to add/modify/delete a file outside the packages folder.\nIt attempts to add/modify/delete a file in a subdirectory of the packages folder.\n\nThe pull request is automatically flagged for manual review if:\n\nIt attempts to modify or delete any existing file in packages.\nA contributed text file is not a single-line file.\nThe single line in the text file is does not have a standard newline character.\nThe text file looks like a custom JSON entry (for packages in a subdirectory of a GitHub repository).\nThe name of the the text file is not a valid R package name.\nThe URL in the text file cannot be parsed.\nThe URL scheme is anything other than https.\nThe domain of the URL is anything other than github.com or gitlab.com.\nThe URL points to an organization or user such as https://github.com/r-lib rather than a repository such as https://github.com/r-lib/gh.\nThe URL does not exist or is not online at the time it is checked (HTTP error trying to access it).\nA release could not be found at the repo in the URL.\nThe version-controlled repository name in the URL is different from the name of the file. (For example, if the file is named gh as the package, then the URL https://github.com/r-lib/gh-package would be flagged for manual review, but https://github.com/r-lib/gh would not.)\nThe repository is part of the CRAN mirror at https://github.com/cran. (A fundamental goal of R-releases is to serve complete package dependency chains without reliance on third-party repositories as far as possible.)\nThe package is also on CRAN, and the URL in the pull request cannot be found in the DESCRIPTION file of the latest CRAN release."
+  },
+  {
+    "objectID": "review.html#the-manual-review-process",
+    "href": "review.html#the-manual-review-process",
+    "title": "Review Policy",
+    "section": "The manual review process",
+    "text": "The manual review process\nIf a pull request is flagged for manual review, an R-releases moderator will read the pull request and ask questions if necessary. Although the moderator may make optional suggestions on a case-by-case basis, package reviews must be consistent, reliable, and inclusive whenever possible. The decision to close or merge the pull request must be based exclusively on the following pre-defined list of requirements:\n\nEach contribution must comply with the code of conduct. Examples of prohibited content include profanity, malicious behavior, security risks, copyright violations, and other conduct which could reasonably be considered inappropriate in a professional setting. All this applies to the package, the URL, any other metadata in the contribution, and the contents of the package itself.\nEach contributed URL must point to an existing GitHub or GitLab repository.\nEach text file must apply to only one package.\nThe text file name must be the name of the package.\nFor JSON listings, the \"branch\" field must be \"*release\" (except in specific predetermined cases such as packages in https://github.com/cran), the \"subdirectory\" field must be supplied and exist, the \"url\" field must exist and be correct, and the \"package\" field must agree with the name of the text file.\nThe package name, URL, and all other metadata must be complete and correct.\nThe URL must be the true/official location of the source code or a faithful mirror of the true location. The package maintainers have the authority to choose the URL. Unofficial or unsupported forks should not be included. The moderator must use discretion on a case-by-case basis because sometimes a fork becomes the true version (e.g. if the original maintainer abandons a package and becomes unreachable indefinitely).\nThe URL must have a release on GitHub or GitLab so R-universe can process the package without error. As a last resort, if the maintainer does not provide their own releases, a repository from the CRAN mirror at https://github.com/cran may be registered.\nIf the listing of an existing package is modified, then the moderator must verify that the new information is complete and correct. In many cases, it may be necessary to obtain permission from the package maintainer.\nThe reasons for deleting a package listing may vary on a case-by-case basis, the moderator must carefully consider the impact that deletion would have on the community and on reverse dependencies. In many cases, it may be necessary to obtain permission from the package maintainer."
+  },
+  {
+    "objectID": "users.html",
+    "href": "users.html",
+    "title": "Users",
+    "section": "",
+    "text": "Simply add R-releases to your repository settings:\noptions(repos = c(\"https://r-releases.r-universe.dev\", getOption(\"repos\")))\nR natively supports multiple repositories as a core language feature, and the above only needs to be set once per session. We recommend adding it to your .Rprofile so that it is always available.\nAlternatively, to prioritize CRAN over R-releases:\noptions(repos = c(getOption(\"repos\"), \"https://r-releases.r-universe.dev\"))\nThen proceed to use install.packages() as you would normally."
+  },
+  {
+    "objectID": "users.html#how-to-install-a-package-from-r-releases",
+    "href": "users.html#how-to-install-a-package-from-r-releases",
+    "title": "Users",
+    "section": "",
+    "text": "Simply add R-releases to your repository settings:\noptions(repos = c(\"https://r-releases.r-universe.dev\", getOption(\"repos\")))\nR natively supports multiple repositories as a core language feature, and the above only needs to be set once per session. We recommend adding it to your .Rprofile so that it is always available.\nAlternatively, to prioritize CRAN over R-releases:\noptions(repos = c(getOption(\"repos\"), \"https://r-releases.r-universe.dev\"))\nThen proceed to use install.packages() as you would normally."
+  },
+  {
+    "objectID": "users.html#ensuring-your-package-is-always-available",
+    "href": "users.html#ensuring-your-package-is-always-available",
+    "title": "Users",
+    "section": "Ensuring your package is always available",
+    "text": "Ensuring your package is always available\nR-releases is designed to work seamlessly alongside CRAN. By prioritizing CRAN in the settings above, you can choose to still get your packages from CRAN, only using R-releases as a fall-back.\nFor any number of possible reasons, a package may become unavailable on CRAN at any time due to its strict archival policy.\n\nOften due to archival of a strong dependency (which automatically archives all of its reverse depedencies at short notice) and is outside of the maintainer’s control.\nSituations can be temporary, but may take an extended time to resolve.\n\nBy contributing a package that you rely on, you can ensure that it remains available for your critical workflows."
+  },
+  {
+    "objectID": "users.html#faster-updates-direct-from-maintainers",
+    "href": "users.html#faster-updates-direct-from-maintainers",
+    "title": "Users",
+    "section": "Faster updates direct from maintainers",
+    "text": "Faster updates direct from maintainers\nMaintainers may choose to use R-releases as a faster release channel, especially for packages under intensive development.\nCRAN is first and foremost an archival network, and its policy restricts the frequency of package updates. R-releases allows the timely dissemination of newer package versions containing critical updates or bug fixes.\nIf a package maintainer recommends you to install a package from R-releases, please prioritize R-releases in front of CRAN in the repository settings above."
   },
   {
     "objectID": "contributors.html",
@@ -77,52 +126,10 @@
     "text": "Getting help\nPlease report bugs to https://github.com/r-releases/help/issues and send other feedback and questions to https://github.com/r-releases/help/discussions. Please note that https://github.com/r-releases/r-releases can only accept pull requests to add or modify package entries."
   },
   {
-    "objectID": "users.html",
-    "href": "users.html",
-    "title": "Users",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R-releases",
     "section": "",
-    "text": "Simply add R-releases to your repository settings:\noptions(repos = c(\"https://r-releases.r-universe.dev\", getOption(\"repos\")))\nR natively supports multiple repositories as a core language feature, and the above only needs to be set once per session. We recommend adding it to your .Rprofile so that it is always available.\nAlternatively, to prioritize CRAN over R-releases:\noptions(repos = c(getOption(\"repos\"), \"https://r-releases.r-universe.dev\"))\nThen proceed to use install.packages() as you would normally."
-  },
-  {
-    "objectID": "users.html#how-to-install-a-package-from-r-releases",
-    "href": "users.html#how-to-install-a-package-from-r-releases",
-    "title": "Users",
-    "section": "",
-    "text": "Simply add R-releases to your repository settings:\noptions(repos = c(\"https://r-releases.r-universe.dev\", getOption(\"repos\")))\nR natively supports multiple repositories as a core language feature, and the above only needs to be set once per session. We recommend adding it to your .Rprofile so that it is always available.\nAlternatively, to prioritize CRAN over R-releases:\noptions(repos = c(getOption(\"repos\"), \"https://r-releases.r-universe.dev\"))\nThen proceed to use install.packages() as you would normally."
-  },
-  {
-    "objectID": "users.html#ensuring-your-package-is-always-available",
-    "href": "users.html#ensuring-your-package-is-always-available",
-    "title": "Users",
-    "section": "Ensuring your package is always available",
-    "text": "Ensuring your package is always available\nR-releases is designed to work seamlessly alongside CRAN. By prioritizing CRAN in the settings above, you can choose to still get your packages from CRAN, only using R-releases as a fall-back.\nFor any number of possible reasons, a package may become unavailable on CRAN at any time due to its strict archival policy.\n\nOften due to archival of a strong dependency (which automatically archives all of its reverse depedencies at short notice) and is outside of the maintainer’s control.\nSituations can be temporary, but may take an extended time to resolve.\n\nBy contributing a package that you rely on, you can ensure that it remains available for your critical workflows."
-  },
-  {
-    "objectID": "users.html#faster-updates-direct-from-maintainers",
-    "href": "users.html#faster-updates-direct-from-maintainers",
-    "title": "Users",
-    "section": "Faster updates direct from maintainers",
-    "text": "Faster updates direct from maintainers\nMaintainers may choose to use R-releases as a faster release channel, especially for packages under intensive development.\nCRAN is first and foremost an archival network, and its policy restricts the frequency of package updates. R-releases allows the timely dissemination of newer package versions containing critical updates or bug fixes.\nIf a package maintainer recommends you to install a package from R-releases, please prioritize R-releases in front of CRAN in the repository settings above."
-  },
-  {
-    "objectID": "review.html",
-    "href": "review.html",
-    "title": "Review Policy",
-    "section": "",
-    "text": "As the contributors page explains, updates to the R-releases package listings come from pull requests to https://github.com/r-releases/r-releases from members of the R community. In the vast majority of cases, a GitHub app automatically merges the pull request. However, some pull requests need to be manually reviewed by an R-releases moderator. This document describes this manual review process. The goals are to:"
-  },
-  {
-    "objectID": "review.html#the-automated-review-process",
-    "href": "review.html#the-automated-review-process",
-    "title": "Review Policy",
-    "section": "The automated review process",
-    "text": "The automated review process\nThe review_pull_requests.yaml GitHub Actions workflow runs periodically and reviews each new open pull request using r.releases.utils::review_pull_request(). Depending on the results of the automated checks, the bot will automatically merge the pull request, close it, or flag it for manual review. The bot will post an informative comment explaining the decision, and it may add a GitHub label to the pull request for triage purposes.\nThe pull request is automatically closed if:\n\nIt attempts to add/modify/delete a file outside the packages folder.\nIt attempts to add/modify/delete a file in a subdirectory of the packages folder.\n\nThe pull request is automatically flagged for manual review if:\n\nIt attempts to modify or delete any existing file in packages.\nA contributed text file is not a single-line file.\nThe single line in the text file is does not have a standard newline character.\nThe text file looks like a custom JSON entry (for packages in a subdirectory of a GitHub repository).\nThe name of the the text file is not a valid R package name.\nThe URL in the text file cannot be parsed.\nThe URL scheme is anything other than https.\nThe domain of the URL is anything other than github.com or gitlab.com.\nThe URL points to an organization or user such as https://github.com/r-lib rather than a repository such as https://github.com/r-lib/gh.\nThe URL does not exist or is not online at the time it is checked (HTTP error trying to access it).\nA release could not be found at the repo in the URL.\nThe version-controlled repository name in the URL is different from the name of the file. (For example, if the file is named gh as the package, then the URL https://github.com/r-lib/gh-package would be flagged for manual review, but https://github.com/r-lib/gh would not.)\nThe repository is part of the CRAN mirror at https://github.com/cran. (A fundamental goal of R-releases is to serve complete package dependency chains without reliance on third-party repositories as far as possible.)\nThe package is also on CRAN, and the URL in the pull request cannot be found in the DESCRIPTION file of the latest CRAN release."
-  },
-  {
-    "objectID": "review.html#the-manual-review-process",
-    "href": "review.html#the-manual-review-process",
-    "title": "Review Policy",
-    "section": "The manual review process",
-    "text": "The manual review process\nIf a pull request is flagged for manual review, an R-releases moderator will read the pull request and ask questions if necessary. Although the moderator may make optional suggestions on a case-by-case basis, package reviews must be consistent, reliable, and inclusive whenever possible. The decision to close or merge the pull request must be based exclusively on the following pre-defined list of requirements:\n\nEach contribution must comply with the code of conduct. Examples of prohibited content include profanity, malicious behavior, security risks, copyright violations, and other conduct which could reasonably be considered inappropriate in a professional setting. All this applies to the package, the URL, any other metadata in the contribution, and the contents of the package itself.\nEach contributed URL must point to an existing GitHub or GitLab repository.\nEach text file must apply to only one package.\nThe text file name must be the name of the package.\nFor JSON listings, the \"branch\" field must be \"*release\" (except in specific predetermined cases such as packages in https://github.com/cran), the \"subdirectory\" field must be supplied and exist, the \"url\" field must exist and be correct, and the \"package\" field must agree with the name of the text file.\nThe package name, URL, and all other metadata must be complete and correct.\nThe URL must be the true/official location of the source code or a faithful mirror of the true location. The package maintainers have the authority to choose the URL. Unofficial or unsupported forks should not be included. The moderator must use discretion on a case-by-case basis because sometimes a fork becomes the true version (e.g. if the original maintainer abandons a package and becomes unreachable indefinitely).\nThe URL must have a release on GitHub or GitLab so R-universe can process the package without error. As a last resort, if the maintainer does not provide their own releases, a repository from the CRAN mirror at https://github.com/cran may be registered.\nIf the listing of an existing package is modified, then the moderator must verify that the new information is complete and correct. In many cases, it may be necessary to obtain permission from the package maintainer.\nThe reasons for deleting a package listing may vary on a case-by-case basis, the moderator must carefully consider the impact that deletion would have on the community and on reverse dependencies. In many cases, it may be necessary to obtain permission from the package maintainer."
+    "text": "R-releases is a community-curated, maintainer-driven repository of R package releases.\nAnyone can contribute packages in the GitHub repository at https://github.com/r-releases/r-releases. Once a package is registered, R-universe automatically builds and checks every new release and makes it available to install from https://r-releases.r-universe.dev/. Package maintainers have complete control over deployment.\nThe R-releases effort originated from the R Consortium Repositories Working Group."
   }
 ]
