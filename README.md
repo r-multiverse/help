@@ -1,4 +1,4 @@
-# R-releases help repository <a href="https://r-releases.github.io/"><img src="logo/logo-readme.png" align="right" width="140" /></a>
+# R-releases help repository <a href="https://r-releases.github.io/"><img src="https://r-releases.github.io/logo/logo-readme.png" align="right" width="140" /></a>
 
 This is the repository that accepts bug reports, feedback and other questions for R-releases.
 
