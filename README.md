@@ -1,4 +1,4 @@
-# R-multiverse help repository <a href="https://r-multiverse.org/"><img src="https://r-multiverse.org/logo/logo-readme.png" align="right" width="140" /></a>
+# R-multiverse help repository <a href="https://r-multiverse.org/"><img src="https://r-multiverse.org/logo/logo-hexbin.png" align="right" width="140" /></a>
 
 This is the repository that accepts bug reports, feedback and other questions about R-multiverse.
 
