@@ -5,7 +5,7 @@ labels: "moderator onboarding"
 assignees: r-multiverse/administrators
 ---
 
-I would like to join the R-multiverse [moderator](https://r-multiverse.org/team.html#moderators) team.
+@r-multiverse/administrators, I would like to join the R-multiverse [moderator](https://r-multiverse.org/team.html#moderators) team.
 
 ## Onboarding process
 
