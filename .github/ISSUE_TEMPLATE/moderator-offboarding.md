@@ -5,7 +5,7 @@ labels: "moderator offboarding"
 assignees: r-multiverse/administrators
 ---
 
-@r-multiverse/administrators, I would like to leave the R-multiverse [moderator](https://r-multiverse.org/team.html#moderators) team.
+@r-multiverse/administrators, please remove me as [moderator](https://r-multiverse.org/team.html#moderators).
 
 ## Offboarding process
 
